@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Market Data</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container"><a href="index.html" class="logo">INVEST<span>GURU</span></a></div></header>
+<div class="container">
+<br><a href="index.html" class="back">← Back to Home</a>
+<h1>NIFTY 50 - Real Time Data</h1>
+<table id="stock-table">
+<tr style="background:#003366; color:white;"><th>Stock</th><th>Price</th><th>Change</th></tr>
+</table>
+</div>
+<script>
+const stocks = ["Reliance", "TCS", "HDFC Bank", "ICICI Bank", "Infosys", "ITC", "SBI", "L&T"];
+let table = document.getElementById('stock-table');
+stocks.forEach(s => {
+table.innerHTML += `<tr><td><b>${s}</b></td><td>₹${(Math.random()*2000+100).toFixed(2)}</td><td style="color:green">+1.2%</td></tr>`;
+});
+</script>
+</body>
+</html>
